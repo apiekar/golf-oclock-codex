@@ -1,0 +1,4 @@
+interface:
+  display_name: "Golf O Clock"
+  short_description: "Read-only access to The Tips booking API"
+  default_prompt: "Use $golf-oclock to inspect Golf O Clock reservations or customer records safely."

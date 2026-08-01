@@ -16,6 +16,8 @@ It cannot create, change, cancel, or delete anything in Golf O'Clock.
 
 Requirements: macOS, Git, Python 3, Codex, and a Golf O'Clock API key issued for Liam.
 
+Before cloning, Liam must accept the private-repository invitation from GitHub.
+
 ```bash
 git clone https://github.com/apiekar/golf-oclock-codex.git
 cd golf-oclock-codex
@@ -24,6 +26,15 @@ cd golf-oclock-codex
 ```
 
 The Keychain command prompts for the API key without putting it in shell history. Start a fresh Codex session after installing the skill.
+
+### Get Liam's API key
+
+1. Liam signs into The Tips Golf O'Clock with his own manager account.
+2. Open `https://thetipsgolf.golfoclock.com/manage/control-panel/integrations?providerId=apikeys`.
+3. Create a dedicated key named for Liam's Codex access, if his account exposes key creation.
+4. Run `./scripts/configure-keychain.sh` and enter that key at the Keychain prompt.
+
+If Liam cannot create a key, an account administrator or Golf O'Clock support must issue one. Do not reuse Alejandro's existing key. The CLI enforces a read-only endpoint allowlist, but Golf O'Clock API keys are not confirmed to have server-side read-only scopes. Revoke Liam's dedicated key when he no longer needs access.
 
 Verify the connection:
 

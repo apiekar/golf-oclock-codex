@@ -54,6 +54,7 @@ Use `--output output/descriptive-name.json` to write JSON with owner-only permis
 - Do not create, edit, cancel, or reschedule reservations.
 - Do not add or remove credits, memberships, users, or configuration.
 - Never print, log, commit, or ask the user to paste an API key into chat.
+- Use a dedicated API key for this installation. The CLI's read-only allowlist is a client-side guardrail, not a confirmed server-side key scope.
 - Never commit API results or customer data.
 - Do not equate Golf O'Clock membership fields with confirmed billing status. Read [references/data-boundaries.md](references/data-boundaries.md) before answering membership, revenue, or payment questions.
 - If a task requires a write operation, stop and ask for an approved operational workflow outside this skill.
